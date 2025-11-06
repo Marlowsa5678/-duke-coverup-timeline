@@ -1,32 +1,36 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
-const AUTH_USER = process.env.BASIC_USER!;
-const AUTH_PASS = process.env.BASIC_PASS!;
-const AUTH_HEADER =
-  "Basic " + Buffer.from(`${AUTH_USER}:${AUTH_PASS}`).toString("base64");
-
-export function middleware(req: NextRequest) {
-  if (
-    req.nextUrl.pathname.startsWith("/_next") ||
-    req.nextUrl.pathname.startsWith("/favicon.ico")
-  ) {
-    return NextResponse.next();
-  }
-
+export function middleware(req) {
   const auth = req.headers.get("authorization");
-  if (auth === AUTH_HEADER) {
+
+  const USER = process.env.BASIC_USER;
+  const PASS = process.env.BASIC_PASS;
+
+  if (!auth) {
+    return new NextResponse("Authentication required", {
+      status: 401,
+      headers: {
+        "WWW-Authenticate": 'Basic realm="Secure Area"',
+      },
+    });
+  }
+
+  const [scheme, encoded] = auth.split(" ");
+
+  if (!encoded) {
+    return new NextResponse("Invalid authorization header", { status: 401 });
+  }
+
+  const decoded = Buffer.from(encoded, "base64").toString();
+  const [user, pass] = decoded.split(":");
+
+  if (user === USER && pass === PASS) {
     return NextResponse.next();
   }
 
-  return new NextResponse("Authentication required", {
-    status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="Secure Area"'
-    }
-  });
+  return new NextResponse("Invalid credentials", { status: 401 });
 }
 
 export const config = {
-  matcher: "/:path*"
+  matcher: "/:path*",
 };
