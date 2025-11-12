@@ -1,0 +1,346 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e2e8f0, #cbd5e1);
+  padding: 2rem;
+}
+
+.wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.title p {
+  font-size: 1.5rem;
+  color: #475569;
+}
+
+.coordinationCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 4px solid #ef4444;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader span {
+  font-size: 2rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.consulGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .consulGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.consulCard {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.consulCard.rojas {
+  background: #fef2f2;
+  border: 2px solid #f87171;
+}
+
+.consulCard.duke {
+  background: #eff6ff;
+  border: 2px solid #60a5fa;
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.avatar.rojas {
+  background: #ef4444;
+}
+
+.avatar.duke {
+  background: #3b82f6;
+}
+
+.consulName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.consulTitle {
+  font-size: 1.125rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.consulLocation {
+  font-size: 1.125rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.consulActions {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.consulActions p {
+  margin: 0.25rem 0;
+}
+
+.consulActions strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.connectionBox {
+  background: #fbbf24;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 2px solid #d97706;
+  margin-top: 2rem;
+}
+
+.connectionBox p {
+  font-size: 1.125rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.connectionBox ul {
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.connectionBox ul li {
+  margin: 0.5rem 0;
+}
+
+.patternCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 4px solid #334155;
+  margin-bottom: 2rem;
+}
+
+.comparisonBox {
+  background: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.responseType {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.responseType.typical {
+  background: #dcfce7;
+  border: 2px solid #22c55e;
+}
+
+.responseType.duke {
+  background: #fee2e2;
+  border: 2px solid #ef4444;
+}
+
+.responseType p:first-child {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.responseType p.typical {
+  color: #14532d;
+}
+
+.responseType p.duke {
+  color: #7f1d1d;
+}
+
+.responseType p:last-child {
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.timeline {
+  margin-top: 2rem;
+}
+
+.timeline h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.timelineEntry {
+  background: #fef2f2;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #ef4444;
+  margin-bottom: 1rem;
+}
+
+.timelineDate {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent ul {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.responseBox {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.responseBox p {
+  margin: 0.25rem 0;
+}
+
+.noResponse {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.conclusionBox {
+  background: #0f172a;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.conclusionBox h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.conclusionBox ul {
+  list-style: none;
+  font-size: 1.125rem;
+}
+
+.conclusionBox ul li {
+  margin: 0.5rem 0;
+}
+
+.highlightText {
+  color: #fbbf24;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.resultCard {
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 4px solid #fbbf24;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resultCard h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.appointmentBox {
+  background: white;
+  color: #15803d;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.attribution {
+  text-align: center;
+  color: #475569;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
